@@ -1,6 +1,8 @@
-require(['vennison','lib/socket.io'],function(vennison,socketio) {
+require(['vennison','sampledata','lib/socket.io'],
+    function(vennison,sampledata,socketio) {
 
-    console.log("hi"); 
-
+    vennison({
+      data : sampledata(10000)
+    });
 
 });
