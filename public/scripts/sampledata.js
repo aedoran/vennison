@@ -14,10 +14,23 @@ define(['/scripts/underscore.js'],function(_) {
     var list = [];
     var keys = _.keys(attr);
     for (var i=0; i<num; i++) {
-      var obj = {}; 
+      var obj = {};
       _.each(_.keys(attr),function (key) {
         obj[key] = attr[key][Math.floor(Math.random()*attr[key].length)];
       });
+      if (i<700) {
+        obj['last_login'] = '5/18/2012';
+      } else {
+        obj['last_login'] = '5/18/2011';
+      }
+
+      if (i<300) {
+        obj['downloads']  = 25;
+        obj['comments']   = 15;
+      } else {
+        obj['downloads'] = 0;
+        obj['comments'] = 0;
+      }
       list.push(obj);
     }
 
