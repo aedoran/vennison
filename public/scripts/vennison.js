@@ -299,7 +299,7 @@ define(['/scripts/lib/d3.js',
     _.each(document.querySelectorAll("circle.node"),
         function(node) {
           node.addEventListener("mouseover", function(e) {
-            e.target.setAttribute("fill","black");
+//            e.target.setAttribute("fill","black");
             var c = e.target.getAttribute("class");
             var classes = c.split(' ');
             var el = document.getElementById("info");

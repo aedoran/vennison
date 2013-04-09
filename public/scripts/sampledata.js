@@ -19,7 +19,7 @@ define(['/scripts/underscore.js'],function(_) {
         obj[key] = attr[key][Math.floor(Math.random()*attr[key].length)];
       });
       if (i<700) {
-        obj['last_login'] = '5/18/2012';
+        obj['last_login'] = Date()).getTime();
       } else {
         obj['last_login'] = '5/18/2011';
       }
